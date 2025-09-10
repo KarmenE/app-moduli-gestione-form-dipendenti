@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reso</title>
+    <link rel="stylesheet" href="form reso merce.css">
+    <script src="form reso merce.js" defer></script>
+</head>
+<body>
+    
+
+        <h1>Modulo Reso</h1>
+
+        <form action="#" method="post">
+            
+            <label for="prodotto">Prodotto coinvolto*</label>
+            <input type="text" id="prodotto" name="prodotto" required>
+            <span class="error"></span><br>
+
+            
+            <label for="movimento">Tipo di movimento (entrata/uscita)*</label>
+            <select id="movimento" name="movimento" required>
+                <option value="entrata">Entrata</option>
+                <option value="uscita">Uscita</option>
+            </select>
+            <span class="error"></span><br><br>
+            
+            <label for="quantita">Quantità*</label>
+            <input type="number" id="quantita" name="quantita" required>
+            <span class="error"></span><br>
+
+            <label for="data">Data del movimento*</label>
+            <input type="date" id="data" name="data" required>
+            <span class="error"></span><br>
+    
+            <label for="motivo">Motivo del reso*</label>
+            <textarea id="motivo" name="motivo" rows="4" required></textarea>
+            <span class="error"></span><br>
+            
+            <label for="allegato">Allega documento/foto del prodotto difettoso (pdf, jpeg, png)</label>
+            <input type="file" id="allegato" name="allegato" accept=".pdf,.jpeg,.jpg,.png" required><br>
+            
+            <button type="submit" id="btn">Invia</button>
+            
+        </form>
+
+        <p id="messaggio" class="success"></p>
+
+
+
+
+</body>
+</html>

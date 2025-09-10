@@ -1,0 +1,28 @@
+h1{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+form {
+    max-width: 400px;
+    padding: 30px;
+    margin: 0 auto;
+    background: #b7e4c7;
+}
+input{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.error{
+    color: red;
+    margin-left: 40%;
+}
+
+.success{
+    color: green;
+    margin-left: 40%;
+}

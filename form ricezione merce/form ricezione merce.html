@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricezione merce dal fornitore</title>
+    <link rel="stylesheet" href="form ricezione merce.css">
+    <script src="form ricezione merce.js" defer></script>
+</head>
+<body>
+    <h1>Ricezione Merce dal Fornitore</h1>
+    <form action="#" method="post">
+        <div>
+            <label for="prodotto">Prodotto ricevuto*</label>
+            <input type="text" id="prodotto" name="prodotto" required>
+            <span class="error"></span>
+        </div>
+        <div>
+            <label for="quantita">Quantità ricevuta*</label>
+            <input type="number" id="quantita" name="quantita" required>
+            <span class="error"></span>
+        </div>
+        <div>
+            <label for="data_ricezione">Data di ricezione*</label>
+            <input type="date" id="data_ricezione" name="data_ricezione" required>
+            <span class="error"></span>
+        </div>
+        <div>
+            <label for="numero_fattura">Numero di fattura*</label>
+            <input type="number" id="numero_fattura" name="numero_fattura" required>
+            <span class="error"></span>
+        </div>
+
+        <button type="submit" id="btn">Invia</button>
+    </form>
+
+    <p id="messaggio" class="success"></p>
+
+
+</body>
+</html>

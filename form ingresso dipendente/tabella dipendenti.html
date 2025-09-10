@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users list</title>
+    <!-- Collegamento a Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    
+    <!-- Collegamento al file -->
+    <script defer src="dipendenti.js"></script>
+    
+
+    <!-- Questo script popola la tabella ogni volta che viene caricata la pagina -->
+    <script defer>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            function updateUserTable() {
+
+                //in questa variabili assegno quello che mi ritorna il metodo listUser 
+                //che sta nel file js
+                const users = listUsers();
+
+                //questa è la variabile sull'html che inizializzo vuota
+                const tableBody = document.getElementById('userTableBody');
+                tableBody.innerHTML = '';
+
+                //ciclo sulla variabile che ha tutti gli utenti
+                users.forEach(user => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${user.nome}</td>
+                        <td>${user.cognome}</td>
+                        <td>${user.matricola}</td>
+                        <td>
+                            <button class="btn btn-danger" onclick="deleteUser(${user.nome})">Delete</button>
+                        </td>
+
+     `;             //inserisce ad ogni passaggio nel ciclo 
+                    //dentro la variabile html per accedere alle proprieta dell'array 
+                    //che hai definito si fa con il "."
+                    tableBody.appendChild(row);
+                });
+            }
+
+ // Funzione per cancellare un utente
+ window.deleteUser = function(userNome) {
+                const confirmation = confirm('Sicuro?');
+                if (confirmation) {
+                    const userDeleted = deleteUserFromStorage(userNome);
+                    if (userDeleted) {
+                        alert('cancellato con successo.');
+                        updateUserTable();
+                    } else {
+                        alert('Non trovato.');
+                    }
+                }
+            }
+
+            // Initialize the user table
+            updateUserTable();
+
+
+
+
+
+
+
+            // Chiamo il metod che inserisce gli utenti di default
+            updateUserTable();
+        }
+    
+    
+    
+    );
+    </script>
+
+</head>
+
+
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-4">User List</h1>
+        <!-- Menù -->
+        <nav>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="/Moduli per la gestione dei form/form registrazione dipendente/form registrazione dipendente.html">Registrazione dipendente</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Moduli per la gestione dei form/form ingresso dipendente/tabella dipendenti.html">Tabella dipendenti</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Moduli per la gestione dei form/form ingresso dipendente/form ingresso.html">Ingresso dipendente</a></li>
+            </ul>
+        </nav>
+
+        <!-- tabella -->
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Matricola</th>
+                    <th>Azioni</th> 
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+                <!-- Le righe dell'utente verranno popolate qui da JavaScript-->
+                
+                <!--  perche ho questo nel metodo:
+                        <td>${user.id}</td>
+                        <td>${user.name}</td>
+                        <td>${user.email}</td>
+                        <td>${user.password}</td>
+                -->
+
+            </tbody>
+        </table>
+    </div>
+
+ 
+</body>
+</html>

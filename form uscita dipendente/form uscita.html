@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form uscita dipendente</title>
+    <link rel="stylesheet" href="form uscita.css">
+    <script src="form uscita.js" defer></script>
+
+</head>
+<body>
+    
+    <h1>Form di Uscita Dipendente</h1>
+    <form  action="mailto:datorelavoro@gmail.com" method="post" autocomplete="on"> <!--nell'attributo action va inserita l'email del datore di lavoro (dopo aver effettuato il logging invierà la mail al datore)
+    -->
+        <label for="nome">Nome*:</label><br>
+        <input type="text" id="nome" name="nome" required autocomplete="nome">
+        <span class="error"></span><br><br>
+        
+
+        <label for="cognome">Cognome*:</label><br>
+        <input type="text" id="cognome" name="cognome" required autocomplete="cognome">
+        <span class="error"></span><br><br>
+
+        <label for="matricola">Numero Matricola*:</label><br>
+        <input type="text" id="matricola" name="matricola" required autocomplete="matricola">
+        <span class="error"></span><br><br>
+
+        <label for="oraFine">Ora fine:</label><br>
+        <input type="text" id="oraFine" name="oraFine" readonly autocomplete="off">
+        <span class="error"></span><br><br>
+
+        <label for="note">Note per eventuale uscita anticipata, di straordinario o di normale uscita:</label><br>
+        <textarea id="note" name="note" rows="4" cols="50" autocomplete="off"></textarea><br><br>
+
+        <button type="submit" id="btn">Esci</button>
+    </form>
+    <p id="messaggio" class="success"></p>
+
+
+</body>
+</html>

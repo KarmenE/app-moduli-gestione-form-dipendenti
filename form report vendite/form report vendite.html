@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report vendite</title>
+    <link rel="stylesheet" href="form report vendite.css">
+    <script src="form report vendite.js" defer></script>
+</head>
+<body>
+    
+    <h1>Report Vendite</h1>
+    <form onsubmit="event.preventDefault(); calcolaTotale();">
+        <label for="nome">Nome dipendente*:</label><br>
+        <input type="text" id="nome" name="nome" required>
+        <span class="error"></span><br><br>
+
+        <label for="prodotto">Prodotto venduto*:</label><br>
+        <select id="prodotto" name="prodotto" required>
+            <option value="">Seleziona un prodotto</option>
+            <option value="Prodotto1">Prodotto 1</option>
+            <option value="Prodotto2">Prodotto 2</option>
+            <option value="Prodotto3">Prodotto 3</option>
+        </select>
+        <span class="error"></span><br><br>
+
+        <label for="quantita">Quantità venduta*:</label><br>
+        <input type="number" id="quantita" name="quantita" required>
+        <span class="error"></span><br>
+        <select id="unita" name="unita" required>
+            <!-- <option value="">Seleziona unità</option> -->
+            <option value="Pz">Pz</option>
+            <option value="Gr">Gr</option>
+            <option value="Kg">Kg</option>
+        </select><br><br>
+
+        <label for="totale">Totale:</label><br>
+        <input type="text" id="totale" name="totale" readonly>
+        <span class="error"></span><br><br>
+
+        <button type="submit" id="btn">Invia</button>
+    </form>
+    <p id="messaggio" class="success"></p>
+
+    
+</body>
+</html>

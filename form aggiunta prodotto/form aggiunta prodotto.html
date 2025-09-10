@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form per aggiunta prodotto al magazzino</title>
+    <link rel="stylesheet" href="form aggiunta prodotto.css">
+    <script src="form aggiunta prodotto.js" defer></script>
+</head>
+<body>
+    
+
+    <h1>Aggiunta Prodotto al Magazzino</h1>
+    <form action="#" method="post">
+        <label for="nome_prodotto">Nome prodotto *:</label><br>
+        <input type="text" id="nome_prodotto" name="nome_prodotto" required>
+        <span class="error"></span><br><br>
+
+        <label for="descrizione">Descrizione:</label><br>
+        <textarea id="descrizione" name="descrizione"></textarea>
+        <span class="error"></span><br><br>
+
+        <label for="quantita_iniziale">Quantità iniziale *:</label><br>
+        <input type="number" id="quantita_iniziale" name="quantita_iniziale" required>
+        <span class="error"></span><br><br>
+
+        <label for="categoria">Categoria *:</label><br>
+        <input type="text" id="categoria" name="categoria" required>
+        <span class="error"></span><br><br>
+
+        <label for="fornitore">Fornitore *:</label><br>
+        <input type="text" id="fornitore" name="fornitore" required>
+        <span class="error"></span><br><br>
+
+        <label for="prezzo_acquisto">Prezzo di acquisto *:</label><br>
+        <input type="number" placeholder="€ Importo" step="0.01" id="prezzo_acquisto" name="prezzo_acquisto" required>
+        <span class="error"></span><br><br>
+
+        <label for="prezzo_vendita">Prezzo di vendita *:</label><br>
+        <input type="number" placeholder="€ Importo" step="0.01" id="prezzo_vendita" name="prezzo_vendita" required>
+        <span class="error"></span><br><br>
+
+        <label for="data_registrazione">Data di registrazione prodotto:</label><br>
+        <input type="date" id="data_registrazione" name="data_registrazione"><br><br>
+
+        <label for="data_scadenza">Data scadenza prodotto:</label><br>
+        <input type="date" id="data_scadenza" name="data_scadenza"><br><br>
+
+        <button type="submit" id="btn">Aggiungi Prodotto</button>
+    </form>
+
+    <p id="messaggio" class="success"></p>
+
+
+</body>
+</html>

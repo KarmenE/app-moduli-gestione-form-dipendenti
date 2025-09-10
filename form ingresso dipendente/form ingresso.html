@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form ingresso dipendente</title>
+    <link rel="stylesheet" href="form ingresso.css">
+    <script src="form ingresso.js" defer></script>
+
+
+</head>
+<body>
+    
+    <h1>Form di Ingresso Dipendente</h1>
+    <form  action="mailto:datorelavoro@gmail.com" method="post"> <!--nell'attributo action va inserita l'email del datore di lavoro (dopo aver effettuato il logging invierà la mail al datore)
+    -->
+        <label for="nome">Nome*:</label><br>
+        <input type="text" id="nome" name="nome" required>
+        <span class="error"></span><br><br>
+        
+
+        <label for="cognome">Cognome*:</label><br>
+        <input type="text" id="cognome" name="cognome" required>
+        <span class="error"></span><br><br>
+
+        <label for="matricola">Numero Matricola*:</label><br>
+        <input type="text" id="matricola" name="matricola" required>
+        <span class="error"></span><br><br>
+
+        <label for="oraInizio">Ora inizio:</label><br>
+        <input type="text" id="oraInizio" name="oraInizio" readonly>
+        <span class="error"></span><br><br>
+
+        <label for="note">Note per eventuali ritardi:</label><br>
+        <textarea id="note" name="note" rows="4" cols="50"></textarea><br><br>
+
+        <button type="submit" id="btn">Invia</button>
+    </form>
+    <p id="messaggio" class="success"></p>
+
+
+</body>
+</html>

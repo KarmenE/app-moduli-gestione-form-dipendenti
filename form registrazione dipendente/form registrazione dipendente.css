@@ -1,0 +1,62 @@
+*{
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+}
+
+h1{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+form {
+    max-width: 350px;
+    padding: 30px;
+    margin: 0 auto;
+    background: #b7e4c7;
+}
+
+button {
+    padding: 5px;
+    margin-left: 40%;
+}
+
+input{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+textarea{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.phone-prefix-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.phone-prefix-select {
+    margin-right: 5px;
+}
+.phone-number-input {
+    flex: 1;
+}
+
+.error{
+    color: red;
+    margin-left: 40%;
+}
+
+.success{
+    color: green;
+    margin-left: 40%;
+}
+
+.error-message {
+    color: red;
+    display: none;
+}

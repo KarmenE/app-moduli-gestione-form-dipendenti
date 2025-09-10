@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;}
+
+body{
+    margin-left: 30px;
+    margin-right: 30px;}
+
+#wrapper{
+    width: 100%;
+    background-color: whitesmoke;}
+
+.logo{
+    padding: 10px;
+    border-radius: 10%;
+    margin-left: 30px;}
+
+ul {
+    padding: 5px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 30px;}
+
+
+li a {
+    padding: 10px; 
+    color: #081C15; 
+    background-color: whitesmoke;
+    margin: 5px;
+    display: flex;
+    border: 1px solid black;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;   }
+
+li {
+    margin-right: 30px;}
+
+li a:hover {
+    background-color: #d8f3dc;}
+
+li a:hover{
+    transform: translateY(+10%); 
+    transition: transform 0.7s;}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* justify-content: flex-end; */
+    background-color: #DDEFE0;
+    margin-bottom: 25px;
+    align-items: center;}
+
+h1{
+    color: #081C15;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: #d8f3dc 5px 0; 
+    font-size: 40px;
+    margin-bottom: 80px;}
+
+.box11{background-color: #b7e4c7; text-shadow: white 1px 0;}
+.box22{background-color: #95d5b2; text-shadow: white 1px 0;}
+.box33{background-color: #74c69d; text-shadow: white 1px 0;}
+.box44{background-color: #52b788; text-shadow: white 1px 0;}
+
+
+.hovv:hover{
+    /*EFFETTO ALTERNATIVO*/
+    transform: translateX(+5%); 
+    transition: transform 2s;
+    
+    transition: all 1s ease-in-out;
+    height: 160px;
+    /*effetto hover sula scritta che si sposta al centro:*/
+    /* display: flex;
+    justify-content: center; */ }
+
+.hovv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    height: 135px;}
+
+
+#principale{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 40px; }
+    
+#container{
+    height: 830px;
+    border: 2px solid #081C15;
+    padding: 40px;
+    flex-basis: 66%;}
+    
+#container2{
+    height: 830px;
+    border: 2px solid #081C15;
+    padding: 40px;
+    flex-basis: 30%;}
+
+
+
+.box1{background-color: #b7e4c7; text-shadow: white 1px 0;}
+.box2{background-color: #95d5b2; text-shadow: white 1px 0;}
+.box3{background-color: #74c69d; text-shadow: white 1px 0;}
+.box4{background-color: #52b788; text-shadow: white 1px 0;}
+
+.hov:hover{
+    /*EFFETTO ALTERNATIVO*/
+    transform: translateX(+5%); 
+    transition: transform 2s;
+
+    transition: all 1s ease-in-out;
+    height: 160px;
+    /*effetto hover sula scritta che si sposta al centro:*/
+    /* display: flex;
+    justify-content: center; */ }
+
+.hov{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    height: 135px;}
+
+div a {
+    color: black; 
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;}
